@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron text-center">
+    @*<h1 style = "color: white">Portale Polizia Municipale</h1>*@
+    <p class="lead" style = "color: white; margin-top:12rem ">Ricerca persone, numero punti decurtati, città, importi..</p>
+    <div class="input-group" style="margin:auto">
+        @using (Html.BeginForm("SearchView", "Home"))
+        {
+            @Html.TextBox("SearchString")<input type="submit" value="Search" class="btn btn-primary" />
+        }
+
+    </div>
+</div>
+
+
+@*<div class="m-2">
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseAnagraficaTrasgressori" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Elenco anagrafiche trasgressori
+        </a>
+
+        <div class="collapse" id="collapseAnagraficaTrasgressori">
+            <div class="well">
+                @{
+                    Html.RenderAction("_ListAnagraficheTrasgressori");
+                }
+            </div>
+        </div>
+    </div>*@
+<div class="text-center ">
+    <h3>Le principali ricerche: </h3>
+    <div style="margin-bottom:2rem">
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseTrasgressoriMaggiori10Punti" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Trasgressori con decurtazione punti maggiori a 10
+        </a>
+
+        <div class="collapse" id="collapseTrasgressoriMaggiori10Punti">
+            <div class="well">
+                @{
+                    Html.RenderAction("_ListTrasgressoriMaggioriDi10Punti");
+                }
+            </div>
+        </div>
+    </div>
+    <div>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseTrasgressoriMaggiori400Euro" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Trasgressori con importo multa maggiore a 400 €
+        </a>
+
+        <div class="collapse" id="collapseTrasgressoriMaggiori400Euro">
+            <div class="well">
+                @{
+                    Html.RenderAction("_ListTrasgressoriMaggioriDi400Euro");
+                }
+            </div>
+        </div>
+    </div>
+</div>

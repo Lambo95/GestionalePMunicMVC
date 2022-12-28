@@ -1,0 +1,14 @@
+﻿.navbar > li:hover,
+.navbar > li:focus {
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+}
+
+.jumbotron {
+    margin:auto;
+    width:60%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR77nNVnX0nOsunjk3q6v7O2brxcCqM8F7Plw&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

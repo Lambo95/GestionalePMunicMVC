@@ -1,0 +1,72 @@
+﻿@model GestionalePMunicMVC.Models.Anagrafica
+
+@{
+    ViewBag.Title = "DettagliAnagrafica";
+}
+
+<h2>Dettagli Anagrafica</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdAnagrafica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdAnagrafica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cognome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cognome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Indirizzo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Indirizzo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Citta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Citta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CF)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "AnagraficaView")
+</p>
